@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    color: #333;
+    transition: color 0.5s ease;
+}
+
+/* Estilos do Interruptor */
+.interruptor {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.controle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.controle:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    transition: 0.4s;
+}
+
+input:checked+.controle {
+    background-color: #fff;
+}
+
+input:focus+.controle {
+    box-shadow: 0 0 1px #000000;
+}
+
+input:checked+.controle:before {
+    transform: translateX(26px);
+}
+
+/* Estilos do Modo Escuro */
+body.modo-escuro {
+    background-color: #222;
+}
+
+.modo-escuro h1 {
+    color: #fff;
+}
+
+.modo-escuro .controle {
+    background-color: #fff;
+}
+
+.modo-escuro .controle:before {
+    background-color: #777;
+}
