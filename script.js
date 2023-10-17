@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
   alternarTema.addEventListener('change', function () {
     if (alternarTema.checked) {
       document.body.classList.add('modo-escuro');
-      titulo.innerText = 'Tema Escuro';
+      titulo.innerText = 'Escuro';
       ligarSom.play(); // Reproduz o som de ligar
     } else {
       document.body.classList.remove('modo-escuro');
-      titulo.innerText = 'Tema Claro';
+      titulo.innerText = 'Claro';
       desligarSom.play(); // Reproduz o som de desligar
     }
   });
